@@ -1,5 +1,6 @@
 package com.jujuwon.book.springboot.domain.posts;
 
+import com.jujuwon.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import javax.persistence.*;
 // Default 값으로 클래스의 카멜케이스 이름을 언더스코어 네이밍으로 테이블 이름 매칭
 // ex) SalesManager.java -> sales_manager table
 // Entity 클래스에는 Setter 메소드를 만들지 말 것 !
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id
     // 해당 테이블의 PK 필드
